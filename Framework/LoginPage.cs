@@ -21,27 +21,31 @@ namespace Framework
 
     public class LoginCommand
     {
-        private readonly string userName;
-        private string password;
+        private readonly string _userName;
+        private string _password;
+
+        public string UserName => _userName;
+
+        public string Password { get => _password; set => _password = value; }
 
         public LoginCommand(string userName)
         {
-            this.userName = userName;
+            _userName = userName;
         }
 
         public LoginCommand WithPassword(string password)
         {
-            this.password = password;
+            Password = password;
             return this;
         }
 
         public void Login()
         {
             var loginInput = Driver.Instance.FindElement(By.Id("user_login"));
-            loginInput.SendKeys(userName);
+            loginInput.SendKeys(UserName);
 
             var passwordInput = Driver.Instance.FindElement(By.Id("user_pass"));
-            passwordInput.SendKeys(password);
+            passwordInput.SendKeys(Password);
 
             var loginButton = Driver.Instance.FindElement(By.Id("wp-submit"));
             loginButton.Click();
