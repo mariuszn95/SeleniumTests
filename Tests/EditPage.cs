@@ -15,7 +15,7 @@ namespace Tests
         public void Author_Can_Edit_A_Page()
         {
             LoginPage.GoTo();
-            LoginPage.LoginAs("admin").WithPassword("admin").Login();
+            LoginPage.LoginAs("trUilbAS").WithPassword("9fzw6AfgjvnAdwYH&5").Login();
 
             ListPostsPage.GoTo(PostType.Page);
             ListPostsPage.SelectPost("Sample Page");

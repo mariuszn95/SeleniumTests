@@ -21,7 +21,7 @@ namespace Tests
         public void Admin_User_Can_Login()
         {
             LoginPage.GoTo();
-            LoginPage.LoginAs("BM0XLfhWKtkIjT87HT2Q").WithPassword("npm()!j)HkxTkNUR3g7@xsSN").Login();
+            LoginPage.LoginAs("trUilbAS").WithPassword("9fzw6AfgjvnAdwYH&5").Login();
 
             Assert.IsTrue(DashboadPage.IsAt(), "Failed to login.");
         }

@@ -15,7 +15,7 @@ namespace Tests
         public void Author_Can_Create_A_Basic_Post()
         {
             LoginPage.GoTo();
-            LoginPage.LoginAs("BM0XLfhWKtkIjT87HT2Q").WithPassword("npm()!j)HkxTkNUR3g7@xsSN").Login();
+            LoginPage.LoginAs("trUilbAS").WithPassword("9fzw6AfgjvnAdwYH&5").Login();
 
             NewPostPage.GoTo();
             NewPostPage.CreatePost("This is test post title")
