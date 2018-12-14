@@ -12,7 +12,7 @@ namespace Framework
                 var title = Driver.Instance.FindElement(By.ClassName("entry-title"));
                 if (title != null)
                     return title.Text;
-                return String.Empty;
+                return string.Empty;
             }
         }
     }
