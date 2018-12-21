@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Framework.Selenium;
 using OpenQA.Selenium;
 
-namespace Framework
+namespace Framework.Pages
 {
     public class PostPage
     {

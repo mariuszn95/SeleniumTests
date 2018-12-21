@@ -1,4 +1,6 @@
-﻿namespace Framework
+﻿using Framework.Selenium;
+
+namespace Framework.Pages
 {
     public static class DashboadPage
     {

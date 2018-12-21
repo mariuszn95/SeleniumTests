@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace Framework
+namespace Framework.Selenium
 {
     public class Driver
     {
@@ -11,6 +12,11 @@ namespace Framework
         public static string Title
         {
             get { return Instance.Title; }
+        }
+
+        public static string BaseAddress
+        {
+            get { return "http://localhost/site/"; }
         }
 
         public static void Initialize()
@@ -22,6 +28,11 @@ namespace Framework
         public static void Close()
         {
             Instance.Close();
+        }
+
+        public static void Wait(TimeSpan timeSpan)
+        {
+            Thread.Sleep((int)(timeSpan.TotalSeconds * 1000));
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Navigation;
+using Framework.Selenium;
+using OpenQA.Selenium;
 
-namespace Framework
+namespace Framework.Pages
 {
     public class ListPostsPage
     {
@@ -9,8 +11,7 @@ namespace Framework
             switch (postType)
             {
                 case PostType.Page:
-                    Driver.Instance.FindElement(By.Id("menu-pages")).Click();
-                    Driver.Instance.FindElement(By.LinkText("All Pages")).Click();
+                    LeftNavigation.Pages.AllPages.Select();
                     break;
             }
         }

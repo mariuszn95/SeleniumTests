@@ -1,22 +1,14 @@
-﻿using Framework;
+﻿using Framework.Pages;
 using NUnit.Framework;
+using Tests.Utilities;
 
-namespace Tests
+namespace Tests.Smoke
 {
-    public class CreatePost
+    public class CreatePost : SetUpTest
     {
-        [SetUp]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
         [Test]
         public void Author_Can_Create_A_Basic_Post()
         {
-            LoginPage.GoTo();
-            LoginPage.LoginAs("trUilbAS").WithPassword("9fzw6AfgjvnAdwYH&5").Login();
-
             NewPostPage.GoTo();
             NewPostPage.CreatePost("This is test post title")
                 .WithBody("Hi, this is the body.")
@@ -25,12 +17,6 @@ namespace Tests
             NewPostPage.GoToNewPost();
 
             Assert.AreEqual(PostPage.Title, "This is test post title", "Title did not match new post.");
-        }
-
-        [TearDown]
-        public void Cleanup()
-        {
-            Driver.Close();
         }
     }
 }

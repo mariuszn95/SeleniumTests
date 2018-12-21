@@ -1,17 +1,15 @@
-﻿using System.Threading;
+﻿using System;
+using Framework.Navigation;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
-namespace Framework
+namespace Framework.Pages
 {
     public class NewPostPage
     {
         public static void GoTo()
         {
-            var menuPosts = Driver.Instance.FindElement(By.Id("menu-posts"));
-            menuPosts.Click();
-
-            var addNew = Driver.Instance.FindElement(By.LinkText("Add New"));
-            addNew.Click();
+            LeftNavigation.Posts.AddNew.Select();
         }
 
         public static CreatePostCommand CreatePost(string title)
@@ -74,7 +72,7 @@ namespace Framework
             Driver.Instance.SwitchTo().ActiveElement().SendKeys(Body);
             Driver.Instance.SwitchTo().DefaultContent();
 
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
 
             Driver.Instance.FindElement(By.Id("publish")).Click();
         }
