@@ -1,9 +1,10 @@
-﻿using Tests.Utilities;
+﻿using Framework.Pages;
+using Tests.Utilities;
 using NUnit.Framework;
 
 namespace Tests.Posts
 {
-    public class AllPosts : SetUpTest
+    public class AllPostsTest : SetUpTest
     {
 //        Added posts show up in all posts
 //        Can active excerpt mode
@@ -44,26 +45,26 @@ namespace Tests.Posts
         [Test]
         public void Added_Posts_Show_Up()
         {
-//            // Go to posts, get post count, store
-//            ListPostsPage.GoTo(PostPage.Posts);
-//            ListPostsPage.StoreCount();
-//            
-//            // Add a new post
-//            NewPostPage.GoTo();
-//            NewPostPage.CreatePost("Added posts show up, title")
-//                .WithBody("Added posts show up, body")
-//                .Publish();
-//            
-//            // Go to posts, get new post count
-//            ListPostsPage.GoTo(PostType.Posts);
-//            Assert.AreEqual(ListPostsPage.PreviousPostCount + 1, ListPostsPage.CurrentPostCount, "Count of posts did not increase");
-//            
-//            // Check for added post
-//            Assert.IsTrue(ListPostsPage.DoesPostExistWithTitle("Added posts show up, title"));
-//            
-//            // Trash post (clean up)
-//            ListPostsPage.TrashPost("");
-//            Assert.AreEqual(ListPostsPage.PreviousPostCount, ListPostsPage.CurrentPostCount, "Couldn't trash post");
+            // Go to posts, get post count, store
+            ListPostsPage.GoTo(PostType.Posts);
+            ListPostsPage.StoreCount();
+            
+            // Add a new post
+            NewPostPage.GoTo();
+            NewPostPage.CreatePost("Added posts show up, title")
+                .WithBody("Added posts show up, body")
+                .Publish();
+            
+            // Go to posts, get new post count
+            ListPostsPage.GoTo(PostType.Posts);
+            Assert.AreEqual(ListPostsPage.PreviousPostCount + 1, ListPostsPage.CurrentPostCount, "Count of posts did not increase");
+            
+            // Check for added post
+            Assert.IsTrue(ListPostsPage.DoesPostExistWithTitle("Added posts show up, title"));
+            
+            // Trash post (clean up)
+            ListPostsPage.TrashPost("");
+            Assert.AreEqual(ListPostsPage.PreviousPostCount, ListPostsPage.CurrentPostCount, "Couldn't trash post");
         }
     }
 }

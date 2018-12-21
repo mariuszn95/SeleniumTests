@@ -4,7 +4,7 @@ using Tests.Utilities;
 
 namespace Tests.Smoke
 {
-    public class EditPage : SetUpTest
+    public class EditPageTest : SetUpTest
     {
         [Test]
         public void Author_Can_Edit_A_Page()

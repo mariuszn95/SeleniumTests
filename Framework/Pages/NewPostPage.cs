@@ -72,7 +72,7 @@ namespace Framework.Pages
             Driver.Instance.SwitchTo().ActiveElement().SendKeys(Body);
             Driver.Instance.SwitchTo().DefaultContent();
 
-            Driver.Wait(TimeSpan.FromSeconds(1));
+            Driver.Wait(TimeSpan.FromSeconds(3));
 
             Driver.Instance.FindElement(By.Id("publish")).Click();
         }

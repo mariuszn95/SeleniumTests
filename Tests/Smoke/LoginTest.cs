@@ -4,7 +4,7 @@ using Tests.Utilities;
 
 namespace Tests.Smoke
 {
-    public class Login : SetUpTest
+    public class LoginTest : SetUpTest
     {
         [Test]
         public void Admin_User_Can_Login()

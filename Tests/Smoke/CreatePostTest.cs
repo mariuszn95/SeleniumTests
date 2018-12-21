@@ -4,7 +4,7 @@ using Tests.Utilities;
 
 namespace Tests.Smoke
 {
-    public class CreatePost : SetUpTest
+    public class CreatePostTest : SetUpTest
     {
         [Test]
         public void Author_Can_Create_A_Basic_Post()

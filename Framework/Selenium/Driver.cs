@@ -22,7 +22,7 @@ namespace Framework.Selenium
         public static void Initialize()
         {
             Instance = new ChromeDriver("C:\\DEV\\SeleniumTests");
-            Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static void Close()
