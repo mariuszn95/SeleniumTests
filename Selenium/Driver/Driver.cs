@@ -23,5 +23,20 @@ namespace Selenium.Driver
         {
             return Instance.FindElement(locator);
         }
+
+        public static void Click(By locator)
+        {
+            FindElement(locator).Click();
+        }
+
+        public static void SendKeys(By locator, string enterValue)
+        {
+            FindElement(locator).SendKeys(enterValue);
+        }
+
+        public static string GetText(By locator)
+        {
+            return FindElement(locator).Text;
+        }
     }
 }

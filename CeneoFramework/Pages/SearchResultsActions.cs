@@ -11,17 +11,17 @@ namespace CeneoFramework.Pages
 
         internal static string GetFirstProductName()
         {
-            return Driver.FindElement(Name).Text;
+            return Driver.GetText(Name);
         }
 
         internal static string GetFirstProductPriceValue()
         {
-            return Driver.FindElement(PriceValue).Text;
+            return Driver.GetText(PriceValue);
         }
 
         internal static string GetFirstProductPricePenny()
         {
-            return Driver.FindElement(PricePenny).Text;
+            return Driver.GetText(PricePenny);
         }
     }
 }

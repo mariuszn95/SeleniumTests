@@ -10,12 +10,12 @@ namespace CeneoFramework.Pages
 
         internal static void EnterSearchValue(string searchValue)
         {
-            Driver.FindElement(SearchInput).SendKeys(searchValue);
+            Driver.SendKeys(SearchButton, searchValue);
         }
 
         internal static void ClickSearchButton()
         {
-            Driver.FindElement(SearchButton).Click();
+            Driver.Click(SearchButton);
         }
     }
 }
