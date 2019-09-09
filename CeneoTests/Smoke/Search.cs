@@ -17,7 +17,7 @@ namespace CeneoTests.Smoke
                 .Name()
                 .WithPrice();
 
-            Assert.True(SearchPage.GetThePriceOfTheFirstProduct > 20);
+            Assert.True(SearchResultsPage.GetThePriceOfTheFirstProduct > 20);
         }
     }
 }

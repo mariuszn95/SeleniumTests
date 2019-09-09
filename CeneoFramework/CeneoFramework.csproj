@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Print.cs" />
+    <Compile Include="Pages\HomeActions.cs" />
     <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Pages\SearchPage.cs" />
+    <Compile Include="Pages\SearchResultsActions.cs" />
+    <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selenium\CeneoDriver.cs" />
   </ItemGroup>
@@ -57,5 +59,6 @@
       <Name>Selenium</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

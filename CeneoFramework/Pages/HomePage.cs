@@ -1,5 +1,4 @@
 ﻿using System;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Selenium.Driver;
 using Selenium.TestContexts;
@@ -17,8 +16,8 @@ namespace CeneoFramework.Pages
 
         public static void Search(string searchValue)
         {
-            Driver.FindElement(By.CssSelector("#form-head-search-q")).SendKeys(searchValue);
-            Driver.FindElement(By.CssSelector(".search-icon")).Click();
+            HomeActions.EnterSearchValue(searchValue);
+            HomeActions.ClickSearchButton();
         }
     }
 }

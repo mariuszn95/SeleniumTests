@@ -1,6 +1,5 @@
 ﻿using System;
-using OpenQA.Selenium;
-using Selenium.Driver;
+using CeneoFramework.Pages;
 
 namespace CeneoFramework.Helpers
 {
@@ -19,7 +18,7 @@ namespace CeneoFramework.Helpers
 
         public FirstProductInformation Name()
         {
-            _name = Driver.FindElement(By.CssSelector(".cat-prod-row-name a")).Text;
+            _name = SearchResultsActions.GetFirstProductName();
 
             Console.Write($"Name: {_name}");
 
@@ -28,8 +27,8 @@ namespace CeneoFramework.Helpers
 
         public FirstProductInformation WithPrice()
         {
-            var priceValue = Driver.FindElement(By.CssSelector(".price .value")).Text;
-            var pricePenny = Driver.FindElement(By.CssSelector(".price .penny")).Text;
+            var priceValue = SearchResultsActions.GetFirstProductPriceValue();
+            var pricePenny = SearchResultsActions.GetFirstProductPricePenny();
 
             _price = $"{priceValue}{pricePenny}";
 

@@ -1,15 +1,12 @@
-﻿using OpenQA.Selenium;
-using Selenium.Driver;
-
-namespace CeneoFramework.Pages
+﻿namespace CeneoFramework.Pages
 {
-    public class SearchPage
+    public class SearchResultsPage
     {
         public static int GetThePriceOfTheFirstProduct
         {
             get
             {
-                var priceValue = Driver.FindElement(By.CssSelector(".price .value")).Text;
+                var priceValue = SearchResultsActions.GetFirstProductPriceValue();
 
                 var intPrice = int.Parse(priceValue);
 

@@ -4,7 +4,7 @@ namespace Selenium.TestContexts
 {
     public class TestContexts
     {
-        private static string _baseAddress;
+        private static string _baseAddress = "https://www.ceneo.pl/";
 
         public TestContexts()
         {
