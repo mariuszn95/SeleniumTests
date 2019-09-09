@@ -1,8 +1,8 @@
-﻿using Framework.Pages;
-using Framework.Selenium;
+﻿using CeneoFramework.Pages;
+using CeneoFramework.Selenium;
 using NUnit.Framework;
 
-namespace Tests.Utilities
+namespace CeneoTests.Utilities
 {
     public class SetUpTest
     {
@@ -10,8 +10,7 @@ namespace Tests.Utilities
         public void Init()
         {
             Driver.Initialize();
-            LoginPage.GoTo();
-            LoginPage.LoginAs("admin").WithPassword("admin").Login();
+            HomePage.GoTo();
         }
 
         [TearDown]
