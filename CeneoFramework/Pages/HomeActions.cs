@@ -10,7 +10,7 @@ namespace CeneoFramework.Pages
 
         internal static void EnterSearchValue(string searchValue)
         {
-            Driver.SendKeys(SearchButton, searchValue);
+            Driver.SendKeys(SearchInput, searchValue);
         }
 
         internal static void ClickSearchButton()
