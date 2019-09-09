@@ -1,6 +1,6 @@
 ﻿namespace WordPressFramework.Navigation
 {
-    class LeftNavigation
+    internal class LeftNavigation
     {
         public class Posts
         {

@@ -4,7 +4,7 @@ namespace WordPressFramework.Pages
 {
     public static class DashboadPage
     {
-        private static string PageTitle = "Dashboard";
+        private static readonly string PageTitle = "Dashboard";
 
         public static bool IsAt()
         {

@@ -8,16 +8,9 @@ namespace WordPressFramework.Pages
 {
     public class ListPostsPage
     {
-        private static int _lastCount;
-        public static int PreviousPostCount
-        {
-            get { return _lastCount; }
-        }
+        public static int PreviousPostCount { get; private set; }
 
-        public static int CurrentPostCount
-        {
-            get { return GetPostCount(); }
-        }
+        public static int CurrentPostCount => GetPostCount();
 
         public static void GoTo(PostType postType)
         {
@@ -41,7 +34,7 @@ namespace WordPressFramework.Pages
 
         public static void StoreCount()
         {
-            _lastCount = GetPostCount();
+            PreviousPostCount = GetPostCount();
         }
 
         private static int GetPostCount()
@@ -73,7 +66,7 @@ namespace WordPressFramework.Pages
 
                 if (links.Count > 0)
                 {
-                    Actions action = new Actions(Driver.Instance);
+                    var action = new Actions(Driver.Instance);
                     action.MoveToElement(links[0]);
                     action.Perform();
                     row.FindElement(By.ClassName("submitdelete")).Click();

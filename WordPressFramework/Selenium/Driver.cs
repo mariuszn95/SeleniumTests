@@ -9,15 +9,9 @@ namespace WordPressFramework.Selenium
     {
         public static IWebDriver Instance { get; set; }
 
-        public static string Title
-        {
-            get { return Instance.Title; }
-        }
+        public static string Title => Instance.Title;
 
-        public static string BaseAddress
-        {
-            get { return "http://localhost/site/"; }
-        }
+        public static string BaseAddress => "http://localhost/site/";
 
         public static void Initialize()
         {
@@ -32,7 +26,7 @@ namespace WordPressFramework.Selenium
 
         public static void Wait(TimeSpan timeSpan)
         {
-            Thread.Sleep((int)(timeSpan.TotalSeconds * 1000));
+            Thread.Sleep((int) (timeSpan.TotalSeconds * 1000));
         }
     }
 }

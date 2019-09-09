@@ -7,6 +7,17 @@ namespace WordPressFramework.Pages
 {
     public class NewPostPage
     {
+        public static string Title
+        {
+            get
+            {
+                var title = Driver.Instance.FindElement(By.Id("title"));
+                if (title != null)
+                    return title.GetAttribute("value");
+                return string.Empty;
+            }
+        }
+
         public static void GoTo()
         {
             LeftNavigation.Posts.AddNew.Select();
@@ -31,32 +42,18 @@ namespace WordPressFramework.Pages
                 return true;
             return false;
         }
-
-        public static string Title
-        {
-            get
-            {
-                var title = Driver.Instance.FindElement(By.Id("title"));
-                if (title != null)
-                    return title.GetAttribute("value");
-                return string.Empty;
-            }
-        }
     }
 
     public class CreatePostCommand
     {
-        private readonly string _title;
-        private string _body;
-
-        public string Body { get => _body; set => _body = value; }
-
-        public string Title => _title;
-
         public CreatePostCommand(string title)
         {
-            _title = title;
+            Title = title;
         }
+
+        public string Body { get; set; }
+
+        public string Title { get; }
 
         public CreatePostCommand WithBody(string body)
         {

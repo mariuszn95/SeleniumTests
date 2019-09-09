@@ -22,17 +22,14 @@ namespace WordPressFramework.Pages
 
     public class LoginCommand
     {
-        private readonly string _userName;
-        private string _password;
-
-        public string UserName => _userName;
-
-        public string Password { get => _password; set => _password = value; }
-
         public LoginCommand(string userName)
         {
-            _userName = userName;
+            UserName = userName;
         }
+
+        public string UserName { get; }
+
+        public string Password { get; set; }
 
         public LoginCommand WithPassword(string password)
         {
