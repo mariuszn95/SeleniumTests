@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{387CFE63-C6E2-4EFC-AF85-91528E5FE705}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{C0A7E901-8BA8-47D1-810A-B32BE1F8940B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroTests", "AllegroTests\AllegroTests.csproj", "{D43DCDCE-8896-49D9-97A8-C9978F1DAC7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeneoTests", "CeneoTests\CeneoTests.csproj", "{DCF2DBB3-E042-4E79-BA1A-DFD1B12D618E}"
@@ -20,20 +16,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeneoFramework", "CeneoFram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium", "Selenium\Selenium.csproj", "{2E32A63B-AF4F-4F2E-8F8A-177E4D2A567F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressTests", "WordPressTests\WordPressTests.csproj", "{6A216443-C7F2-403F-88E7-B2D7C285C468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressFramework", "WordPressFramework\WordPressFramework.csproj", "{B74B901E-4D4D-4D0D-A7DE-1472F8CEF551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{387CFE63-C6E2-4EFC-AF85-91528E5FE705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{387CFE63-C6E2-4EFC-AF85-91528E5FE705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{387CFE63-C6E2-4EFC-AF85-91528E5FE705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{387CFE63-C6E2-4EFC-AF85-91528E5FE705}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0A7E901-8BA8-47D1-810A-B32BE1F8940B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0A7E901-8BA8-47D1-810A-B32BE1F8940B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0A7E901-8BA8-47D1-810A-B32BE1F8940B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0A7E901-8BA8-47D1-810A-B32BE1F8940B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D43DCDCE-8896-49D9-97A8-C9978F1DAC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D43DCDCE-8896-49D9-97A8-C9978F1DAC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43DCDCE-8896-49D9-97A8-C9978F1DAC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,6 +46,14 @@ Global
 		{2E32A63B-AF4F-4F2E-8F8A-177E4D2A567F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E32A63B-AF4F-4F2E-8F8A-177E4D2A567F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E32A63B-AF4F-4F2E-8F8A-177E4D2A567F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A216443-C7F2-403F-88E7-B2D7C285C468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A216443-C7F2-403F-88E7-B2D7C285C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A216443-C7F2-403F-88E7-B2D7C285C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A216443-C7F2-403F-88E7-B2D7C285C468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74B901E-4D4D-4D0D-A7DE-1472F8CEF551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74B901E-4D4D-4D0D-A7DE-1472F8CEF551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74B901E-4D4D-4D0D-A7DE-1472F8CEF551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74B901E-4D4D-4D0D-A7DE-1472F8CEF551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
