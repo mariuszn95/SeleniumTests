@@ -9,14 +9,14 @@ namespace CeneoTests.Utilities
         [SetUp]
         public void Init()
         {
-            Driver.Initialize();
+            CeneoDriver.Initialize();
             HomePage.GoTo();
         }
 
         [TearDown]
         public void Cleanup()
         {
-            Driver.Close();
+            CeneoDriver.Close();
         }
     }
 }

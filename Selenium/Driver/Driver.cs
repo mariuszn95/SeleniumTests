@@ -2,13 +2,11 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace CeneoFramework.Selenium
+namespace Selenium.Driver
 {
     public class Driver
     {
         public static IWebDriver Instance { get; set; }
-
-        public static string BaseAddress => "https://www.ceneo.pl/";
 
         public static void Initialize()
         {
@@ -19,6 +17,11 @@ namespace CeneoFramework.Selenium
         public static void Close()
         {
             Instance.Close();
+        }
+
+        public static IWebElement FindElement(By locator)
+        {
+            return Instance.FindElement(locator);
         }
     }
 }

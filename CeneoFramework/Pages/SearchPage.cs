@@ -1,5 +1,5 @@
-﻿using CeneoFramework.Selenium;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using Selenium.Driver;
 
 namespace CeneoFramework.Pages
 {
@@ -9,7 +9,7 @@ namespace CeneoFramework.Pages
         {
             get
             {
-                var priceValue = Driver.Instance.FindElement(By.CssSelector(".price .value")).Text;
+                var priceValue = Driver.FindElement(By.CssSelector(".price .value")).Text;
 
                 var intPrice = int.Parse(priceValue);
 

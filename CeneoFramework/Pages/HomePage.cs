@@ -1,7 +1,8 @@
 ﻿using System;
-using CeneoFramework.Selenium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using Selenium.Driver;
+using Selenium.TestContexts;
 
 namespace CeneoFramework.Pages
 {
@@ -9,15 +10,15 @@ namespace CeneoFramework.Pages
     {
         public static void GoTo()
         {
-            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
+            Driver.Instance.Navigate().GoToUrl(TestContexts.GetBaseAddress());
             var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
             wait.Until(d => d.Title.Contains("Ceneo"));
         }
 
         public static void Search(string searchValue)
         {
-            Driver.Instance.FindElement(By.CssSelector("#form-head-search-q")).SendKeys(searchValue);
-            Driver.Instance.FindElement(By.CssSelector(".search-icon")).Click();
+            Driver.FindElement(By.CssSelector("#form-head-search-q")).SendKeys(searchValue);
+            Driver.FindElement(By.CssSelector(".search-icon")).Click();
         }
     }
 }
