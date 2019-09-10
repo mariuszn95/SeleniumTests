@@ -38,6 +38,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks", "Frameworks", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{CBE1712E-1BC2-4044-9600-C15F59987A42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenshot", "Screenshot\Screenshot.csproj", "{F2B5EAB9-ABA4-4048-9762-59531E459BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorMessages", "ErrorMessages\ErrorMessages.csproj", "{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +96,14 @@ Global
 		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B5EAB9-ABA4-4048-9762-59531E459BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B5EAB9-ABA4-4048-9762-59531E459BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B5EAB9-ABA4-4048-9762-59531E459BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B5EAB9-ABA4-4048-9762-59531E459BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

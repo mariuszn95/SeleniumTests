@@ -58,6 +58,10 @@
       <Project>{867db4ed-f578-4126-b27e-d55f5397813d}</Project>
       <Name>CeneoFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ErrorMessages\ErrorMessages.csproj">
+      <Project>{a018ca1b-b17f-4d7b-b603-e6d9b5e6a929}</Project>
+      <Name>ErrorMessages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OlxFramework\OlxFramework.csproj">
       <Project>{d6702e43-1608-4956-b63d-3d53346fb196}</Project>
       <Name>OlxFramework</Name>
