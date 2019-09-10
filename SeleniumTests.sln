@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{816BF9AA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks", "Frameworks", "{151DB3CA-05EA-4971-808F-5113060C4786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{CBE1712E-1BC2-4044-9600-C15F59987A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{6834AD63-0FA8-4F5D-A16E-E019DC4EB2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6834AD63-0FA8-4F5D-A16E-E019DC4EB2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6834AD63-0FA8-4F5D-A16E-E019DC4EB2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE1712E-1BC2-4044-9600-C15F59987A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
