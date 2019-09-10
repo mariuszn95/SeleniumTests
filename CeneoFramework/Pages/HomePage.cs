@@ -1,5 +1,5 @@
 ﻿using Selenium.DriverHelpers;
-using Selenium.TestContexts;
+using static TestContexts.TestContexts.TestContexts;
 
 namespace CeneoFramework.Pages
 {
@@ -7,7 +7,7 @@ namespace CeneoFramework.Pages
     {
         public static void GoTo()
         {
-            Navigate.ToUrl(TestContexts.GetBaseAddress());
+            Navigate.ToUrl(GetBaseAddress());
             Wait.Until(d => d.Title.Contains("Ceneo"));
         }
 

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Selenium.TestContexts
+namespace TestContexts.TestContexts
 {
     public class TestContexts
     {
