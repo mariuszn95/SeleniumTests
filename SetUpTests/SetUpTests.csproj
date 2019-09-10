@@ -48,12 +48,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\CeneoSetUpTest.cs" />
+    <Compile Include="Utilities\AllegroSetUpTest.cs" />
     <Compile Include="Utilities\OlxSetUpTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AllegroFramework\AllegroFramework.csproj">
+      <Project>{590517c8-a001-4205-993c-7fe6b3db6786}</Project>
+      <Name>AllegroFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CeneoFramework\CeneoFramework.csproj">
       <Project>{867db4ed-f578-4126-b27e-d55f5397813d}</Project>
       <Name>CeneoFramework</Name>

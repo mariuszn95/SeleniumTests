@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenshot", "Screenshot\Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorMessages", "ErrorMessages\ErrorMessages.csproj", "{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllegroFramework", "AllegroFramework\AllegroFramework.csproj", "{590517C8-A001-4205-993C-7FE6B3DB6786}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A018CA1B-B17F-4D7B-B603-E6D9B5E6A929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{590517C8-A001-4205-993C-7FE6B3DB6786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590517C8-A001-4205-993C-7FE6B3DB6786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590517C8-A001-4205-993C-7FE6B3DB6786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590517C8-A001-4205-993C-7FE6B3DB6786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{D6702E43-1608-4956-B63D-3D53346FB196} = {151DB3CA-05EA-4971-808F-5113060C4786}
 		{CA715E69-F697-4F1D-A86F-2442099A656A} = {816BF9AA-CAF9-4B90-9B6E-BC688A7585CF}
 		{6834AD63-0FA8-4F5D-A16E-E019DC4EB2D6} = {151DB3CA-05EA-4971-808F-5113060C4786}
+		{590517C8-A001-4205-993C-7FE6B3DB6786} = {151DB3CA-05EA-4971-808F-5113060C4786}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C08E7FDF-863D-411C-B910-0F3C67F0FC12}

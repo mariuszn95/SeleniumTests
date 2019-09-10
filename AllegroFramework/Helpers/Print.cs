@@ -1,7 +1,7 @@
 ﻿using System;
-using CeneoFramework.Pages;
+using AllegroFramework.Pages;
 
-namespace CeneoFramework.Helpers
+namespace AllegroFramework.Helpers
 {
     public static class Print
     {
@@ -27,10 +27,9 @@ namespace CeneoFramework.Helpers
 
         public void WithPrice()
         {
-            var priceValue = SearchResultsActions.GetFirstProductPriceValue();
-            var pricePenny = SearchResultsActions.GetFirstProductPricePenny();
+            var price = SearchResultsActions.GetFirstProductPrice();
 
-            _price = $"{priceValue}{pricePenny} zł";
+            _price = $"{price}";
 
             Console.WriteLine($", Price: {_price}");
         }
