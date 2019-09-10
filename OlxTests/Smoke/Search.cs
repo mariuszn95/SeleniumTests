@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
 using OlxFramework.Helpers;
 using OlxFramework.Pages;
-using OlxTests.Utilities;
+using SetUpTests.Utilities;
 
 namespace OlxTests.Smoke
 {
     [TestFixture]
-    public class Search : SetUpTest
+    public class Search : OlxSetUpTest
     {
         [Test]
         public void

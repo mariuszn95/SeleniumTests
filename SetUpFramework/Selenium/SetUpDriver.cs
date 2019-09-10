@@ -1,8 +1,8 @@
 ﻿using Selenium.Driver;
 
-namespace OlxFramework.Selenium
+namespace SetUpFramework.Selenium
 {
-    public static class OlxDriver
+    public static class SetUpDriver
     {
         public static void Initialize()
         {

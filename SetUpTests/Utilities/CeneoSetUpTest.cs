@@ -1,22 +1,22 @@
 ﻿using CeneoFramework.Pages;
-using CeneoFramework.Selenium;
 using NUnit.Framework;
+using SetUpFramework.Selenium;
 
-namespace CeneoTests.Utilities
+namespace SetUpTests.Utilities
 {
-    public class SetUpTest
+    public class CeneoSetUpTest
     {
         [SetUp]
         public void Init()
         {
-            CeneoDriver.Initialize();
+            SetUpDriver.Initialize();
             HomePage.GoTo();
         }
 
         [TearDown]
         public void Cleanup()
         {
-            CeneoDriver.Close();
+            SetUpDriver.Close();
         }
     }
 }

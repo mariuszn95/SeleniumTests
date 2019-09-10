@@ -44,7 +44,6 @@
     <Compile Include="Pages\SearchResultsActions.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selenium\OlxDriver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

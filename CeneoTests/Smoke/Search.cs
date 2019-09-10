@@ -1,12 +1,12 @@
 ﻿using CeneoFramework.Helpers;
 using CeneoFramework.Pages;
-using CeneoTests.Utilities;
 using NUnit.Framework;
+using SetUpTests.Utilities;
 
 namespace CeneoTests.Smoke
 {
     [TestFixture]
-    public class Search : SetUpTest
+    public class Search : CeneoSetUpTest
     {
         [Test]
         public void

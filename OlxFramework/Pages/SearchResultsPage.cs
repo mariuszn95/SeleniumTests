@@ -10,7 +10,16 @@ namespace OlxFramework.Pages
             {
                 var priceValue = SearchResultsActions.GetFirstProductPriceValue();
 
-                var intPrice = int.Parse(priceValue.Substring(0, priceValue.IndexOf(" ", StringComparison.Ordinal)));
+                int intPrice;
+
+                try
+                {
+                    intPrice = int.Parse(priceValue.Substring(0, priceValue.IndexOf(" ", StringComparison.Ordinal)));
+                }
+                catch (Exception)
+                {
+                    intPrice = int.Parse(priceValue.Substring(0, priceValue.IndexOf(",", StringComparison.Ordinal)));
+                }
 
                 return intPrice;
             }

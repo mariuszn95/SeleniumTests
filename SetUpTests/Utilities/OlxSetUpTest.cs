@@ -1,22 +1,22 @@
 ﻿using NUnit.Framework;
 using OlxFramework.Pages;
-using OlxFramework.Selenium;
+using SetUpFramework.Selenium;
 
-namespace OlxTests.Utilities
+namespace SetUpTests.Utilities
 {
-    public class SetUpTest
+    public class OlxSetUpTest
     {
         [SetUp]
         public void Init()
         {
-            OlxDriver.Initialize();
+            SetUpDriver.Initialize();
             HomePage.GoTo();
         }
 
         [TearDown]
         public void Cleanup()
         {
-            OlxDriver.Close();
+            SetUpDriver.Close();
         }
     }
 }
