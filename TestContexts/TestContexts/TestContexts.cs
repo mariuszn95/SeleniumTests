@@ -1,11 +1,12 @@
 ﻿using NUnit.Framework;
+using System.Configuration;
 
 namespace TestContexts.TestContexts
 {
     public class TestContexts
     {
         private static string _artifacts = "C:\\Artifacts";
-        private static string _baseAddress = "https://www.ceneo.pl/";
+        private static string _baseAddress = ConfigurationManager.AppSettings["BaseAddress"];
 
         public TestContexts()
         {
