@@ -2,7 +2,7 @@
 
 namespace OlxFramework.Pages
 {
-    public class SearchResultsPage
+    public static class SearchResultsPage
     {
         public static int GetThePriceOfTheFirstProduct
         {

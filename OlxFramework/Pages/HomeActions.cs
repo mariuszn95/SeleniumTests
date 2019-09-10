@@ -3,7 +3,7 @@ using Selenium.Driver;
 
 namespace OlxFramework.Pages
 {
-    internal class HomeActions
+    internal static class HomeActions
     {
         private static readonly By SearchInput = By.CssSelector("#headerSearch");
         private static readonly By SearchButton = By.CssSelector("#submit-searchmain");

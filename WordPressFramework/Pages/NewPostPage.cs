@@ -5,7 +5,7 @@ using WordPressFramework.Selenium;
 
 namespace WordPressFramework.Pages
 {
-    public class NewPostPage
+    public static class NewPostPage
     {
         public static string Title
         {
@@ -51,9 +51,9 @@ namespace WordPressFramework.Pages
             Title = title;
         }
 
-        public string Body { get; set; }
+        private string Body { get; set; }
 
-        public string Title { get; }
+        private string Title { get; }
 
         public CreatePostCommand WithBody(string body)
         {

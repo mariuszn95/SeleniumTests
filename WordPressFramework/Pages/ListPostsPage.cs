@@ -1,12 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using WordPressFramework.Navigation;
 using WordPressFramework.Selenium;
 
 namespace WordPressFramework.Pages
 {
-    public class ListPostsPage
+    public static class ListPostsPage
     {
         public static int PreviousPostCount { get; private set; }
 
@@ -61,8 +60,7 @@ namespace WordPressFramework.Pages
             var rows = Driver.Instance.FindElements(By.TagName("tr"));
             foreach (var row in rows)
             {
-                ReadOnlyCollection<IWebElement> links;
-                links = row.FindElements(By.LinkText(title));
+                var links = row.FindElements(By.LinkText(title));
 
                 if (links.Count > 0)
                 {

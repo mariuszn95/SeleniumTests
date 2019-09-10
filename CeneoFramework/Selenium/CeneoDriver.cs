@@ -2,7 +2,7 @@
 
 namespace CeneoFramework.Selenium
 {
-    public class CeneoDriver
+    public static class CeneoDriver
     {
         public static void Initialize()
         {

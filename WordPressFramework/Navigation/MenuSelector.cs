@@ -3,7 +3,7 @@ using WordPressFramework.Selenium;
 
 namespace WordPressFramework.Navigation
 {
-    internal class MenuSelector
+    internal static class MenuSelector
     {
         public static void Select(string topLevelMenuId, string subMenuLinkText)
         {

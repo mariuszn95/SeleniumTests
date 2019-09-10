@@ -2,9 +2,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Selenium.Helpers
+namespace Selenium.DriverHelpers
 {
-    public class Wait
+    public static class Wait
     {
         public static void Until(Func<IWebDriver, bool> condition)
         {

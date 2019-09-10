@@ -3,7 +3,7 @@ using WordPressFramework.Selenium;
 
 namespace WordPressFramework.Pages
 {
-    public class PostPage
+    public static class PostPage
     {
         public static string Title
         {

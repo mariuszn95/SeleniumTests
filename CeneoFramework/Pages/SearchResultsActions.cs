@@ -3,7 +3,7 @@ using Selenium.Driver;
 
 namespace CeneoFramework.Pages
 {
-    internal class SearchResultsActions
+    internal static class SearchResultsActions
     {
         private static readonly By Name = By.CssSelector(".cat-prod-row-name a");
         private static readonly By PriceValue = By.CssSelector(".price .value");

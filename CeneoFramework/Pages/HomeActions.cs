@@ -3,7 +3,7 @@ using Selenium.Driver;
 
 namespace CeneoFramework.Pages
 {
-    internal class HomeActions
+    internal static class HomeActions
     {
         private static readonly By SearchInput = By.CssSelector("#form-head-search-q");
         private static readonly By SearchButton = By.CssSelector(".search-icon");

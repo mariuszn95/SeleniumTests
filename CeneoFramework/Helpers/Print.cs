@@ -3,7 +3,7 @@ using CeneoFramework.Pages;
 
 namespace CeneoFramework.Helpers
 {
-    public class Print
+    public static class Print
     {
         public static FirstProductInformation FirstProductInformation()
         {
@@ -25,7 +25,7 @@ namespace CeneoFramework.Helpers
             return this;
         }
 
-        public FirstProductInformation WithPrice()
+        public void WithPrice()
         {
             var priceValue = SearchResultsActions.GetFirstProductPriceValue();
             var pricePenny = SearchResultsActions.GetFirstProductPricePenny();
@@ -33,8 +33,6 @@ namespace CeneoFramework.Helpers
             _price = $"{priceValue}{pricePenny}";
 
             Console.WriteLine($", Price: {_price}");
-
-            return this;
         }
     }
 }

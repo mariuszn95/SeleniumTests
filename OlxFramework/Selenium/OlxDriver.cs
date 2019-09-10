@@ -2,7 +2,7 @@
 
 namespace OlxFramework.Selenium
 {
-    public class OlxDriver
+    public static class OlxDriver
     {
         public static void Initialize()
         {

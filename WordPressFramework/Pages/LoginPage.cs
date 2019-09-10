@@ -5,7 +5,7 @@ using WordPressFramework.Selenium;
 
 namespace WordPressFramework.Pages
 {
-    public class LoginPage
+    public static class LoginPage
     {
         public static void GoTo()
         {
@@ -27,9 +27,9 @@ namespace WordPressFramework.Pages
             UserName = userName;
         }
 
-        public string UserName { get; }
+        private string UserName { get; }
 
-        public string Password { get; set; }
+        private string Password { get; set; }
 
         public LoginCommand WithPassword(string password)
         {

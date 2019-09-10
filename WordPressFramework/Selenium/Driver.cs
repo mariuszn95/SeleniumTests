@@ -5,9 +5,9 @@ using OpenQA.Selenium.Chrome;
 
 namespace WordPressFramework.Selenium
 {
-    public class Driver
+    public static class Driver
     {
-        public static IWebDriver Instance { get; set; }
+        public static IWebDriver Instance { get; private set; }
 
         public static string Title => Instance.Title;
 

@@ -4,9 +4,9 @@ using OpenQA.Selenium.Chrome;
 
 namespace Selenium.Driver
 {
-    public class Driver
+    public static class Driver
     {
-        public static IWebDriver Instance { get; set; }
+        public static IWebDriver Instance { get; private set; }
 
         public static void Initialize()
         {
@@ -19,7 +19,7 @@ namespace Selenium.Driver
             Instance.Close();
         }
 
-        public static IWebElement FindElement(By locator)
+        private static IWebElement FindElement(By locator)
         {
             return Instance.FindElement(locator);
         }

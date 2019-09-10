@@ -3,7 +3,7 @@ using Selenium.Driver;
 
 namespace OlxFramework.Pages
 {
-    internal class SearchResultsActions
+    internal static class SearchResultsActions
     {
         private static readonly By Name = By.CssSelector(".wrap .title-cell strong");
         private static readonly By PriceValue = By.CssSelector(".price strong");

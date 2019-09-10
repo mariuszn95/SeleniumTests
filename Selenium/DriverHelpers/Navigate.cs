@@ -1,6 +1,6 @@
-﻿namespace Selenium.Helpers
+﻿namespace Selenium.DriverHelpers
 {
-    public class Navigate
+    public static class Navigate
     {
         public static void ToUrl(string url)
         {

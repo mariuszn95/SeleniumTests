@@ -3,7 +3,7 @@ using OlxFramework.Pages;
 
 namespace OlxFramework.Helpers
 {
-    public class Print
+    public static class Print
     {
         public static FirstProductInformation FirstProductInformation()
         {
@@ -25,15 +25,13 @@ namespace OlxFramework.Helpers
             return this;
         }
 
-        public FirstProductInformation WithPrice()
+        public void WithPrice()
         {
             var priceValue = SearchResultsActions.GetFirstProductPriceValue();
 
             _price = $"{priceValue}";
 
             Console.WriteLine($", Price: {_price}");
-
-            return this;
         }
     }
 }
