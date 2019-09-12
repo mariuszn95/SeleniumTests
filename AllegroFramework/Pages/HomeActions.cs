@@ -1,19 +1,21 @@
-﻿using OpenQA.Selenium;
-using Selenium.Driver;
-
-namespace AllegroFramework.Pages
+﻿namespace AllegroFramework.Pages
 {
+    using OpenQA.Selenium;
+
+    using Selenium.Driver;
+
     internal static class HomeActions
     {
-        private static readonly By SearchInput = By.XPath("//input[@data-role='search-input']");
-        private static readonly By SearchButton = By.XPath("//button[@data-role='search-button']");
-
         private static readonly By CloseRodoButton =
             By.XPath("//button[@data-analytics-interaction-value='closeIcon']");
 
-        internal static void EnterSearchValue(string searchValue)
+        private static readonly By SearchButton = By.XPath("//button[@data-role='search-button']");
+
+        private static readonly By SearchInput = By.XPath("//input[@data-role='search-input']");
+
+        internal static void CloseRodo()
         {
-            Driver.SendKeys(SearchInput, searchValue);
+            Driver.Click(CloseRodoButton);
         }
 
         internal static void ClickSearchButton()
@@ -21,9 +23,9 @@ namespace AllegroFramework.Pages
             Driver.Click(SearchButton);
         }
 
-        public static void CloseRodo()
+        internal static void EnterSearchValue(string searchValue)
         {
-            Driver.Click(CloseRodoButton);
+            Driver.SendKeys(SearchInput, searchValue);
         }
     }
 }

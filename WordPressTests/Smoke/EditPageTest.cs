@@ -1,13 +1,17 @@
-﻿using NUnit.Framework;
-using WordPressFramework.Pages;
-using WordPressTests.Utilities;
-
-namespace WordPressTests.Smoke
+﻿namespace WordPressTests.Smoke
 {
+    using NUnit.Framework;
+
+    using WordPressFramework.Pages;
+    using WordPressFramework.Pages.ListPostsPageEnum;
+    using WordPressFramework.Pages.NewPostPage;
+
+    using WordPressTests.Utilities;
+
     public class EditPageTest : SetUpTest
     {
         [Test]
-        public void Author_Can_Edit_A_Page()
+        public void AuthorCanEditAPage()
         {
             ListPostsPage.GoTo(PostType.Page);
             ListPostsPage.SelectPost("Sample Page");

@@ -1,39 +1,47 @@
-﻿using NUnit.Framework;
-using System.Configuration;
-
-namespace TestContexts.TestContexts
+﻿namespace TestContexts.TestContexts
 {
+    using System.Configuration;
+
+    using NUnit.Framework;
+
     public class TestContexts
     {
-        private static string _artifacts = "C:\\Artifacts";
-        private static string _baseAddress = ConfigurationManager.AppSettings["BaseAddress"];
+        private static string artifacts = "C:\\Artifacts";
+
+        private static string baseAddress = ConfigurationManager.AppSettings["BaseAddress"];
 
         public TestContexts()
         {
-            SetArtifactsPath();
-            SetBaseAddress();
+            this.SetArtifactsPath();
+            this.SetBaseAddress();
         }
 
         public static string GetArtifactsPath()
         {
-            return _artifacts;
+            return artifacts;
+        }
+
+        public static string GetBaseAddress()
+        {
+            return baseAddress;
         }
 
         private void SetArtifactsPath()
         {
             var param = TestContext.Parameters.Get("ArtifactsPath");
-            if (null != param) _artifacts = param;
-        }
-
-        public static string GetBaseAddress()
-        {
-            return _baseAddress;
+            if (param != null)
+            {
+                artifacts = param;
+            }
         }
 
         private void SetBaseAddress()
         {
             var param = TestContext.Parameters.Get("BaseAddress");
-            if (null != param) _baseAddress = param;
+            if (param != null)
+            {
+                baseAddress = param;
+            }
         }
     }
 }

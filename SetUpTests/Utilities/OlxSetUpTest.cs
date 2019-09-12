@@ -1,26 +1,29 @@
-﻿using NUnit.Framework;
-using OlxFramework.Pages;
-using SetUpFramework.Selenium;
-using static ErrorMessages.ErrorMessages.ErrorMessages;
-using static SetUpFramework.Screenshot.Screenshot;
-
-namespace SetUpTests.Utilities
+﻿namespace SetUpTests.Utilities
 {
+    using ErrorMessages.ErrorMessages;
+
+    using NUnit.Framework;
+
+    using OlxFramework.Pages;
+
+    using SetUpFramework.Screenshot;
+    using SetUpFramework.Selenium;
+
     public class OlxSetUpTest
     {
+        [TearDown]
+        public void Cleanup()
+        {
+            Screenshot.CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
+            ErrorMessages.VerifyAndClearMessages();
+            SetUpDriver.Close();
+        }
+
         [SetUp]
         public void Init()
         {
             SetUpDriver.Initialize();
             HomePage.GoTo();
-        }
-
-        [TearDown]
-        public void Cleanup()
-        {
-            CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
-            VerifyAndClearMessages();
-            SetUpDriver.Close();
         }
     }
 }

@@ -1,22 +1,21 @@
-﻿using CeneoFramework.Helpers;
-using CeneoFramework.Pages;
-using NUnit.Framework;
-using SetUpTests.Utilities;
-
-namespace CeneoTests.Smoke
+﻿namespace CeneoTests.Smoke
 {
+    using CeneoFramework.Helpers.Print;
+    using CeneoFramework.Pages;
+
+    using NUnit.Framework;
+
+    using SetUpTests.Utilities;
+
     [TestFixture]
     public class Search : CeneoSetUpTest
     {
         [Test]
-        public void
-            User_Can_Search_A_Mug_And_Write_Price_Of_The_First_Found_Item_And_Check_If_The_Price_Is_Greater_Than_20zł()
+        public void UserCanSearchAMugAndWritePriceOfTheFirstFoundItemAndCheckIfThePriceIsGreaterThan20Zł()
         {
             HomePage.Search("Mug");
 
-            Print.FirstProductInformation()
-                .Name()
-                .WithPrice();
+            Print.FirstProductInformation().Name().WithPrice();
 
             Assert.True(SearchResultsPage.GetThePriceOfTheFirstProduct > 20);
         }

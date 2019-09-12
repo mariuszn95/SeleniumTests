@@ -1,10 +1,16 @@
-﻿using Selenium.DriverHelpers;
-using static TestContexts.TestContexts.TestContexts;
-
-namespace AllegroFramework.Pages
+﻿namespace AllegroFramework.Pages
 {
+    using Selenium.DriverHelpers;
+
+    using static TestContexts.TestContexts.TestContexts;
+
     public static class HomePage
     {
+        public static void CloseRodo()
+        {
+            HomeActions.CloseRodo();
+        }
+
         public static void GoTo()
         {
             Navigate.ToUrl(GetBaseAddress());
@@ -15,11 +21,6 @@ namespace AllegroFramework.Pages
         {
             HomeActions.EnterSearchValue(searchValue);
             HomeActions.ClickSearchButton();
-        }
-
-        public static void CloseRodo()
-        {
-            HomeActions.CloseRodo();
         }
     }
 }

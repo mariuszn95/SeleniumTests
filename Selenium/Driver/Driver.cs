@@ -1,9 +1,10 @@
-﻿using System;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace Selenium.Driver
+﻿namespace Selenium.Driver
 {
+    using System;
+
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+
     public static class Driver
     {
         public static IWebDriver Instance { get; private set; }
@@ -19,11 +20,6 @@ namespace Selenium.Driver
             Instance.Close();
         }
 
-        private static IWebElement FindElement(By locator)
-        {
-            return Instance.FindElement(locator);
-        }
-
         public static void Click(By locator)
         {
             FindElement(locator).Click();
@@ -37,6 +33,11 @@ namespace Selenium.Driver
         public static string GetText(By locator)
         {
             return FindElement(locator).Text;
+        }
+
+        private static IWebElement FindElement(By locator)
+        {
+            return Instance.FindElement(locator);
         }
     }
 }

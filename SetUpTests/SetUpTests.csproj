@@ -75,10 +75,6 @@
       <Project>{6834ad63-0fa8-4f5d-a16e-e019dc4eb2d6}</Project>
       <Name>SetUpFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WordPressFramework\WordPressFramework.csproj">
-      <Project>{b74b901e-4d4d-4d0d-a7de-1472f8cef551}</Project>
-      <Name>WordPressFramework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

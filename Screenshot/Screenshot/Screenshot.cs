@@ -1,42 +1,48 @@
-﻿using System;
-using System.IO;
-using OpenQA.Selenium;
-using Selenium.Driver;
-using static Logger.Logger.Logger;
-using static TestContexts.TestContexts.TestContexts;
-
-namespace Screenshot.Screenshot
+﻿namespace Screenshot.Screenshot
 {
+    using System;
+    using System.IO;
+
+    using Logger.Logger;
+
+    using OpenQA.Selenium;
+
+    using Selenium.Driver;
+
+    using TestContexts.TestContexts;
+
     public static class Screenshot
     {
-        public static void Capture(string testName)
+        public static void Save(string testName)
         {
-            if (Directory.Exists(GetArtifactsPath()))
+            if (Directory.Exists(TestContexts.GetArtifactsPath()))
             {
-                if (string.IsNullOrEmpty(testName)) //temporary way to investigate tests that fails in setup section
+                if (string.IsNullOrEmpty(testName))
+                {
+                    // temporary way to investigate tests that fails in setup section
                     testName = Guid.NewGuid().ToString();
-
+                }
 
                 var date = DateTime.Now;
                 var formattedDate = $"{date.Year}-{date.Month}-{date.Day}  {date.Hour}_{date.Minute} ";
-                var screenshotFileName = GetArtifactsPath() + "\\" + formattedDate + testName + ".jpg";
-                Log("Attempting to take a screenshot.");
+                var screenshotFileName = TestContexts.GetArtifactsPath() + "\\" + formattedDate + testName + ".jpg";
+                Logger.Log("Attempting to take a screenshot.");
                 try
                 {
-                    var ss = ((ITakesScreenshot) Driver.Instance).GetScreenshot();
+                    var ss = ((ITakesScreenshot)Driver.Instance).GetScreenshot();
                     ss.SaveAsFile(screenshotFileName, ScreenshotImageFormat.Jpeg);
-                    Log($"Screenshot saved to {screenshotFileName}");
+                    Logger.Log($"Screenshot saved to {screenshotFileName}");
                 }
                 catch (Exception e)
                 {
-                    Log("Error when I tried to take a screenshot.");
-                    Log(e.Message);
+                    Logger.Log("Error when I tried to take a screenshot.");
+                    Logger.Log(e.Message);
                     throw;
                 }
             }
             else
             {
-                Log($@"Missing Folder {GetArtifactsPath()}");
+                Logger.Log($@"Missing Folder {TestContexts.GetArtifactsPath()}");
             }
         }
     }

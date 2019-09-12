@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Logger.Logger
+﻿namespace Logger.Logger
 {
+    using System;
+
     public static class Logger
     {
         public static void Log(string message)

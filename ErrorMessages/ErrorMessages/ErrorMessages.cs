@@ -1,22 +1,24 @@
-﻿using NUnit.Framework;
-
-namespace ErrorMessages.ErrorMessages
+﻿namespace ErrorMessages.ErrorMessages
 {
+    using NUnit.Framework;
+
     public static class ErrorMessages
     {
-        private static string _errorMessage = string.Empty;
+        private static string errorMessage = string.Empty;
 
         public static void AddErrorMessage(string error)
         {
-            _errorMessage = error;
+            errorMessage = error;
         }
 
         public static void VerifyAndClearMessages()
         {
-            var message = _errorMessage;
-            _errorMessage = string.Empty;
+            var message = errorMessage;
+            errorMessage = string.Empty;
             if (!string.IsNullOrEmpty(message))
+            {
                 Assert.Fail(message);
+            }
         }
     }
 }

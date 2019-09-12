@@ -1,15 +1,30 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using WordPressFramework.Navigation;
-using WordPressFramework.Selenium;
-
-namespace WordPressFramework.Pages
+﻿namespace WordPressFramework.Pages
 {
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Interactions;
+
+    using WordPressFramework.Navigation;
+    using WordPressFramework.Pages.ListPostsPageEnum;
+    using WordPressFramework.Selenium;
+
     public static class ListPostsPage
     {
+        public static int CurrentPostCount => GetPostCount();
+
         public static int PreviousPostCount { get; private set; }
 
-        public static int CurrentPostCount => GetPostCount();
+        public static bool DoesPostExistWithTitle(string title)
+        {
+            try
+            {
+                Driver.Instance.FindElement(By.LinkText(title));
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
 
         public static void GoTo(PostType postType)
         {
@@ -36,25 +51,6 @@ namespace WordPressFramework.Pages
             PreviousPostCount = GetPostCount();
         }
 
-        private static int GetPostCount()
-        {
-            var countText = Driver.Instance.FindElement(By.ClassName("displaying-num")).Text;
-            return int.Parse(countText.Split(' ')[0]);
-        }
-
-        public static bool DoesPostExistWithTitle(string title)
-        {
-            try
-            {
-                Driver.Instance.FindElement(By.LinkText(title));
-                return true;
-            }
-            catch (NoSuchElementException)
-            {
-                return false;
-            }
-        }
-
         public static void TrashPost(string title)
         {
             var rows = Driver.Instance.FindElements(By.TagName("tr"));
@@ -72,11 +68,11 @@ namespace WordPressFramework.Pages
                 }
             }
         }
-    }
 
-    public enum PostType
-    {
-        Page,
-        Posts
+        private static int GetPostCount()
+        {
+            var countText = Driver.Instance.FindElement(By.ClassName("displaying-num")).Text;
+            return int.Parse(countText.Split(' ')[0]);
+        }
     }
 }

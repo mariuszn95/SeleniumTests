@@ -1,11 +1,13 @@
-﻿using OpenQA.Selenium;
-using Selenium.Driver;
-
-namespace OlxFramework.Pages
+﻿namespace OlxFramework.Pages
 {
+    using OpenQA.Selenium;
+
+    using Selenium.Driver;
+
     internal static class SearchResultsActions
     {
         private static readonly By Name = By.CssSelector(".wrap .title-cell strong");
+
         private static readonly By PriceValue = By.CssSelector(".price strong");
 
         internal static string GetFirstProductName()

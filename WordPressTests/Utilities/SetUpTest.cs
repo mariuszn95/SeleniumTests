@@ -1,13 +1,14 @@
-﻿using NUnit.Framework;
-using WordPressFramework.Pages;
-using WordPressFramework.Selenium;
-
-namespace WordPressTests.Utilities
+﻿namespace WordPressTests.Utilities
 {
+    using NUnit.Framework;
+
+    using WordPressFramework.Pages.LoginPage;
+    using WordPressFramework.Selenium;
+
     public class SetUpTest
     {
         [SetUp]
-        public void Init()
+        public void SetUp()
         {
             Driver.Initialize();
             LoginPage.GoTo();
@@ -15,7 +16,7 @@ namespace WordPressTests.Utilities
         }
 
         [TearDown]
-        public void Cleanup()
+        public void TearDown()
         {
             Driver.Close();
         }

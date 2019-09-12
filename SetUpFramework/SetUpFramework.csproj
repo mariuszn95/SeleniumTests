@@ -40,13 +40,13 @@
     <Compile Include="Selenium\SetUpDriver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CaptureScreenshot\CaptureScreenshot.csproj">
+      <Project>{ca1e923e-d399-42c5-8302-e6162768863c}</Project>
+      <Name>CaptureScreenshot</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ErrorMessages\ErrorMessages.csproj">
       <Project>{a018ca1b-b17f-4d7b-b603-e6d9b5e6a929}</Project>
       <Name>ErrorMessages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Screenshot\Screenshot.csproj">
-      <Project>{f2b5eab9-aba4-4048-9762-59531e459bda}</Project>
-      <Name>Screenshot</Name>
     </ProjectReference>
     <ProjectReference Include="..\Selenium\Selenium.csproj">
       <Project>{2e32a63b-af4f-4f2e-8f8a-177e4d2a567f}</Project>

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace OlxFramework.Pages
+﻿namespace OlxFramework.Pages
 {
+    using System;
+
     public static class SearchResultsPage
     {
         public static int GetThePriceOfTheFirstProduct

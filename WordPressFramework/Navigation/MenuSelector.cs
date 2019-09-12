@@ -1,8 +1,9 @@
-﻿using OpenQA.Selenium;
-using WordPressFramework.Selenium;
-
-namespace WordPressFramework.Navigation
+﻿namespace WordPressFramework.Navigation
 {
+    using OpenQA.Selenium;
+
+    using WordPressFramework.Selenium;
+
     internal static class MenuSelector
     {
         public static void Select(string topLevelMenuId, string subMenuLinkText)

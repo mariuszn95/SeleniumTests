@@ -1,15 +1,18 @@
-﻿using NUnit.Framework;
-using AllegroFramework.Pages;
-using SetUpFramework.Selenium;
-using static ErrorMessages.ErrorMessages.ErrorMessages;
-using static SetUpFramework.Screenshot.Screenshot;
-
-namespace SetUpTests.Utilities
+﻿namespace SetUpTests.Utilities
 {
+    using AllegroFramework.Pages;
+
+    using ErrorMessages.ErrorMessages;
+
+    using NUnit.Framework;
+
+    using SetUpFramework.Screenshot;
+    using SetUpFramework.Selenium;
+
     public class AllegroSetUpTest
     {
         [SetUp]
-        public void Init()
+        public void SetUp()
         {
             SetUpDriver.Initialize();
             HomePage.GoTo();
@@ -17,10 +20,10 @@ namespace SetUpTests.Utilities
         }
 
         [TearDown]
-        public void Cleanup()
+        public void TearDown()
         {
-            CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
-            VerifyAndClearMessages();
+            Screenshot.CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
+            ErrorMessages.VerifyAndClearMessages();
             SetUpDriver.Close();
         }
     }

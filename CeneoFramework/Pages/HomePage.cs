@@ -1,8 +1,9 @@
-﻿using Selenium.DriverHelpers;
-using static TestContexts.TestContexts.TestContexts;
-
-namespace CeneoFramework.Pages
+﻿namespace CeneoFramework.Pages
 {
+    using Selenium.DriverHelpers;
+
+    using static TestContexts.TestContexts.TestContexts;
+
     public static class HomePage
     {
         public static void GoTo()

@@ -1,7 +1,7 @@
-﻿using WordPressFramework.Selenium;
-
-namespace WordPressFramework.Pages
+﻿namespace WordPressFramework.Pages
 {
+    using WordPressFramework.Selenium;
+
     public static class DashboadPage
     {
         private static readonly string PageTitle = "Dashboard";
@@ -9,7 +9,10 @@ namespace WordPressFramework.Pages
         public static bool IsAt()
         {
             if (Driver.Title.Contains(PageTitle))
+            {
                 return true;
+            }
+
             return false;
         }
     }

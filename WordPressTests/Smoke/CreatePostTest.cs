@@ -1,18 +1,19 @@
-﻿using NUnit.Framework;
-using WordPressFramework.Pages;
-using WordPressTests.Utilities;
-
-namespace WordPressTests.Smoke
+﻿namespace WordPressTests.Smoke
 {
+    using NUnit.Framework;
+
+    using WordPressFramework.Pages;
+    using WordPressFramework.Pages.NewPostPage;
+
+    using WordPressTests.Utilities;
+
     public class CreatePostTest : SetUpTest
     {
         [Test]
-        public void Author_Can_Create_A_Basic_Post()
+        public void AuthorCanCreateABasicPost()
         {
             NewPostPage.GoTo();
-            NewPostPage.CreatePost("This is test post title")
-                .WithBody("Hi, this is the body.")
-                .Publish();
+            NewPostPage.CreatePost("This is test post title").WithBody("Hi, this is the body.").Publish();
 
             NewPostPage.GoToNewPost();
 

@@ -1,17 +1,17 @@
-﻿using Selenium.Driver;
-
-namespace SetUpFramework.Selenium
+﻿namespace SetUpFramework.Selenium
 {
+    using global::Selenium.Driver;
+
     public static class SetUpDriver
     {
-        public static void Initialize()
-        {
-            Driver.Initialize();
-        }
-
         public static void Close()
         {
             Driver.Close();
+        }
+
+        public static void Initialize()
+        {
+            Driver.Initialize();
         }
     }
 }
