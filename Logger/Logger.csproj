@@ -36,6 +36,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LoggerActions.cs" />
+    <Compile Include="Logger\LoggerError.cs" />
+    <Compile Include="Logger\LoggerPage.cs" />
+    <Compile Include="Logger\LoggerScreenshot.cs" />
+    <Compile Include="Logger\LoggerSelenium.cs" />
+    <Compile Include="Logger\LoggerTestContexts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

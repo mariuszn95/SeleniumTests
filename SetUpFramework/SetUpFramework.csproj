@@ -48,6 +48,10 @@
       <Project>{a018ca1b-b17f-4d7b-b603-e6d9b5e6a929}</Project>
       <Name>ErrorMessages</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{cbe1712e-1bc2-4044-9600-c15f59987a42}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Selenium\Selenium.csproj">
       <Project>{2e32a63b-af4f-4f2e-8f8a-177e4d2a567f}</Project>
       <Name>Selenium</Name>

@@ -1,5 +1,9 @@
 ﻿namespace CeneoFramework.Pages
 {
+    using System.Reflection;
+
+    using Logger.Logger;
+
     using OpenQA.Selenium;
 
     using Selenium.Driver;
@@ -14,16 +18,22 @@
 
         internal static string GetFirstProductName()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(Name);
         }
 
         internal static string GetFirstProductPricePenny()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(PricePenny);
         }
 
         internal static string GetFirstProductPriceValue()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(PriceValue);
         }
     }

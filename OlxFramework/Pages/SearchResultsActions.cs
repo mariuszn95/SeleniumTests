@@ -1,5 +1,9 @@
 ﻿namespace OlxFramework.Pages
 {
+    using System.Reflection;
+
+    using Logger.Logger;
+
     using OpenQA.Selenium;
 
     using Selenium.Driver;
@@ -12,11 +16,15 @@
 
         internal static string GetFirstProductName()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(Name);
         }
 
         internal static string GetFirstProductPriceValue()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(PriceValue);
         }
     }

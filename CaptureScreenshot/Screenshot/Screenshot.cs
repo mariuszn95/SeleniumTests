@@ -26,23 +26,23 @@
                 var date = DateTime.Now;
                 var formattedDate = $"{date.Year}-{date.Month}-{date.Day}  {date.Hour}_{date.Minute} ";
                 var screenshotFileName = TestContexts.GetArtifactsPath() + "\\" + formattedDate + testName + ".jpg";
-                Logger.Log("Attempting to take a screenshot.");
+                LoggerScreenshot.Log("Attempting to take a screenshot.");
                 try
                 {
                     var ss = ((ITakesScreenshot)Driver.Instance).GetScreenshot();
                     ss.SaveAsFile(screenshotFileName, ScreenshotImageFormat.Jpeg);
-                    Logger.Log($"Screenshot saved to {screenshotFileName}");
+                    LoggerScreenshot.Log($"Screenshot saved to {screenshotFileName}");
                 }
                 catch (Exception e)
                 {
-                    Logger.Log("Error when I tried to take a screenshot.");
-                    Logger.Log(e.Message);
+                    LoggerScreenshot.Log("Error when I tried to take a screenshot.");
+                    LoggerScreenshot.Log(e.Message);
                     throw;
                 }
             }
             else
             {
-                Logger.Log($@"Missing Folder {TestContexts.GetArtifactsPath()}");
+                LoggerScreenshot.Log($@"Missing Folder {TestContexts.GetArtifactsPath()}");
             }
         }
     }

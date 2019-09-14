@@ -1,6 +1,9 @@
 ﻿namespace AllegroFramework.Pages
 {
     using System;
+    using System.Reflection;
+
+    using Logger.Logger;
 
     using OpenQA.Selenium;
 
@@ -14,11 +17,15 @@
 
         internal static string GetFirstProductName()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             return Driver.GetText(Name);
         }
 
         internal static string GetFirstProductPrice()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             var priceValue = Driver.GetText(PriceValue);
 
             return priceValue;
@@ -26,6 +33,8 @@
 
         internal static int GetFirstProductPriceValue()
         {
+            LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
+
             var priceValue = GetFirstProductPrice();
 
             var intPrice = int.Parse(priceValue.Substring(0, priceValue.IndexOf(",", StringComparison.Ordinal)));

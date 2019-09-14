@@ -1,5 +1,9 @@
 ﻿namespace AllegroFramework.Pages
 {
+    using System.Reflection;
+
+    using Logger.Logger;
+
     using OpenQA.Selenium;
 
     using Selenium.Driver;
@@ -15,17 +19,29 @@
 
         internal static void CloseRodo()
         {
+            LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
+
             Driver.Click(CloseRodoButton);
+
+            LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
 
         internal static void ClickSearchButton()
         {
+            LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
+
             Driver.Click(SearchButton);
+
+            LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
 
         internal static void EnterSearchValue(string searchValue)
         {
+            LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
+
             Driver.SendKeys(SearchInput, searchValue);
+
+            LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
     }
 }

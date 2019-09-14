@@ -1,6 +1,9 @@
 ﻿namespace OlxFramework.Pages
 {
     using System;
+    using System.Reflection;
+
+    using Logger.Logger;
 
     public static class SearchResultsPage
     {
@@ -8,6 +11,8 @@
         {
             get
             {
+                LoggerPage.LogReturn(MethodBase.GetCurrentMethod().Name);
+
                 var priceValue = SearchResultsActions.GetFirstProductPriceValue();
 
                 int intPrice;
