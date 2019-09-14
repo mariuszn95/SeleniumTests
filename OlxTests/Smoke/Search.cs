@@ -7,7 +7,6 @@
 
     using SetUpTests.Utilities;
 
-    [TestFixture]
     public class Search : OlxSetUpTest
     {
         [Test]

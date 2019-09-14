@@ -2,20 +2,18 @@
 {
     using AllegroFramework.Pages;
 
-    using ErrorMessages.ErrorMessages;
-
     using NUnit.Framework;
 
     using SetUpFramework.Screenshot;
-    using SetUpFramework.Selenium;
+    using SetUpFramework.TestFixtures;
 
+    [TestFixture]
     public class AllegroSetUpTest
     {
         [SetUp]
         public void SetUp()
         {
-            SetUpDriver.Initialize();
-            HomePage.GoTo();
+            BaseTestFixture.OpenService();
             HomePage.CloseRodo();
         }
 
@@ -23,8 +21,7 @@
         public void TearDown()
         {
             Screenshot.CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
-            ErrorMessages.VerifyAndClearMessages();
-            SetUpDriver.Close();
+            BaseTestFixture.CleanAndCloseWebsite();
         }
     }
 }

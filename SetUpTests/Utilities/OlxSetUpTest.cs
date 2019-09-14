@@ -1,29 +1,24 @@
 ﻿namespace SetUpTests.Utilities
 {
-    using ErrorMessages.ErrorMessages;
-
     using NUnit.Framework;
 
-    using OlxFramework.Pages;
-
     using SetUpFramework.Screenshot;
-    using SetUpFramework.Selenium;
+    using SetUpFramework.TestFixtures;
 
+    [TestFixture]
     public class OlxSetUpTest
     {
-        [TearDown]
-        public void Cleanup()
+        [SetUp]
+        public void SetUp()
         {
-            Screenshot.CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
-            ErrorMessages.VerifyAndClearMessages();
-            SetUpDriver.Close();
+            BaseTestFixture.OpenService();
         }
 
-        [SetUp]
-        public void Init()
+        [TearDown]
+        public void TearDown()
         {
-            SetUpDriver.Initialize();
-            HomePage.GoTo();
+            Screenshot.CaptureScreenshot(TestContext.CurrentContext.Test.MethodName);
+            BaseTestFixture.CleanAndCloseWebsite();
         }
     }
 }

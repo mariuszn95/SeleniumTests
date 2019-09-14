@@ -33,11 +33,15 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screenshot\Screenshot.cs" />
-    <Compile Include="Selenium\SetUpDriver.cs" />
+    <Compile Include="TestFixtures\BaseTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CaptureScreenshot\CaptureScreenshot.csproj">
@@ -60,6 +64,9 @@
       <Project>{8dee175c-b023-4f10-8ab9-8e00e0cc9b8f}</Project>
       <Name>TestContexts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

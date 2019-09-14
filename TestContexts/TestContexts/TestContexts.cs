@@ -13,10 +13,13 @@
 
         private static string baseAddress = ConfigurationManager.AppSettings["BaseAddress"];
 
+        private static string websiteName = ConfigurationManager.AppSettings["WebsiteName"];
+
         public TestContexts()
         {
             this.SetArtifactsPath();
             this.SetBaseAddress();
+            this.SetWebsiteName();
         }
 
         public static string GetArtifactsPath()
@@ -31,6 +34,13 @@
             LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {baseAddress}");
 
             return baseAddress;
+        }
+
+        public static string GetWebsiteName()
+        {
+            LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {websiteName}");
+
+            return websiteName;
         }
 
         private void SetArtifactsPath()
@@ -58,6 +68,21 @@
                 LoggerTestContexts.LogStart("BaseAddress from CI: " + param);
                 baseAddress = param;
                 LoggerTestContexts.LogEnd("BaseAddress from CI: " + baseAddress);
+            }
+
+            LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+        }
+
+        private void SetWebsiteName()
+        {
+            LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
+
+            var param = TestContext.Parameters.Get("WebsiteName");
+            if (param != null)
+            {
+                LoggerTestContexts.LogStart("WebsiteName from CI: " + param);
+                websiteName = param;
+                LoggerTestContexts.LogEnd("WebsiteName from CI: " + websiteName);
             }
 
             LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);

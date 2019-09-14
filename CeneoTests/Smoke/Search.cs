@@ -6,8 +6,7 @@
     using NUnit.Framework;
 
     using SetUpTests.Utilities;
-
-    [TestFixture]
+    
     public class Search : CeneoSetUpTest
     {
         [Test]
