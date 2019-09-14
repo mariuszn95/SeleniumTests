@@ -3,9 +3,9 @@
     using AllegroFramework.Helpers.Print;
     using AllegroFramework.Pages;
 
-    using NUnit.Framework;
+    using AllegroTests.Utilities;
 
-    using SetUpTests.Utilities;
+    using NUnit.Framework;
 
     public class Search : AllegroSetUpTest
     {

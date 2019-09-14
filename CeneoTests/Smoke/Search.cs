@@ -3,10 +3,10 @@
     using CeneoFramework.Helpers.Print;
     using CeneoFramework.Pages;
 
+    using CeneoTests.Utilities;
+
     using NUnit.Framework;
 
-    using SetUpTests.Utilities;
-    
     public class Search : CeneoSetUpTest
     {
         [Test]

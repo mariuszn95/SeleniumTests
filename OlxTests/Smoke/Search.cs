@@ -5,7 +5,7 @@
     using OlxFramework.Helpers.Print;
     using OlxFramework.Pages;
 
-    using SetUpTests.Utilities;
+    using OlxTests.Utilities;
 
     public class Search : OlxSetUpTest
     {

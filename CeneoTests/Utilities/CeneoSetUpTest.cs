@@ -1,4 +1,4 @@
-﻿namespace SetUpTests.Utilities
+﻿namespace CeneoTests.Utilities
 {
     using NUnit.Framework;
 
@@ -6,14 +6,14 @@
     using SetUpFramework.TestFixtures;
 
     [TestFixture]
-    public class OlxSetUpTest
+    public class CeneoSetUpTest
     {
         [SetUp]
         public void SetUp()
         {
             BaseTestFixture.OpenService();
         }
-
+        
         [TearDown]
         public void TearDown()
         {

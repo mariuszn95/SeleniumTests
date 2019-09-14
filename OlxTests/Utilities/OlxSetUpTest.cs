@@ -1,20 +1,17 @@
-﻿namespace SetUpTests.Utilities
+﻿namespace OlxTests.Utilities
 {
-    using AllegroFramework.Pages;
-
     using NUnit.Framework;
 
     using SetUpFramework.Screenshot;
     using SetUpFramework.TestFixtures;
 
     [TestFixture]
-    public class AllegroSetUpTest
+    public class OlxSetUpTest
     {
         [SetUp]
         public void SetUp()
         {
             BaseTestFixture.OpenService();
-            HomePage.CloseRodo();
         }
 
         [TearDown]

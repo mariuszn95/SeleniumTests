@@ -1,19 +1,22 @@
-﻿namespace SetUpTests.Utilities
+﻿namespace AllegroTests.Utilities
 {
+    using AllegroFramework.Pages;
+
     using NUnit.Framework;
 
     using SetUpFramework.Screenshot;
     using SetUpFramework.TestFixtures;
 
     [TestFixture]
-    public class CeneoSetUpTest
+    public class AllegroSetUpTest
     {
         [SetUp]
         public void SetUp()
         {
             BaseTestFixture.OpenService();
+            HomePage.CloseRodo();
         }
-        
+
         [TearDown]
         public void TearDown()
         {
