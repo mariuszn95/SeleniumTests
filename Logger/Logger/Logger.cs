@@ -2,9 +2,14 @@
 {
     using System;
 
-    internal static class Logger
+    public static class Logger
     {
-        internal static void Log(string message)
+        public static void Log(string message)
+        {
+            Console.WriteLine($"{DateTime.Now} : ***** {message}");
+        }
+
+        internal static void InternalLog(string message)
         {
             Console.WriteLine($"{DateTime.Now} : {message}");
         }

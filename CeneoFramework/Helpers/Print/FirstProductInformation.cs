@@ -1,6 +1,5 @@
 ﻿namespace CeneoFramework.Helpers.Print
 {
-    using System;
     using System.Reflection;
 
     using CeneoFramework.Pages;
@@ -19,7 +18,7 @@
 
             this.name = SearchResultsActions.GetFirstProductName();
 
-            Console.Write($"Name: {this.name}");
+            Logger.Log($"Name: {this.name}");
 
             return this;
         }
@@ -33,7 +32,7 @@
 
             this.price = $"{priceValue}{pricePenny} zł";
 
-            Console.WriteLine($", Price: {this.price}");
+            Logger.Log($", Price: {this.price}");
 
             LoggerPage.LogEnd(MethodBase.GetCurrentMethod().Name);
         }

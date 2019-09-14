@@ -6,17 +6,17 @@
 
         public static void LogStart(string message)
         {
-            Logger.Log($"{dashes}Start - {message}");
+            Logger.InternalLog($"{dashes}Start - {message}");
         }
 
         public static void LogEnd(string message)
         {
-            Logger.Log($"{dashes}End - {message}");
+            Logger.InternalLog($"{dashes}End - {message}");
         }
 
         public static void LogReturn(string message)
         {
-            Logger.Log($"{dashes}Return - {message}");
+            Logger.InternalLog($"{dashes}Return - {message}");
         }
     }
 }

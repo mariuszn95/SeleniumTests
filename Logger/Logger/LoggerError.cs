@@ -4,7 +4,7 @@
     {
         public static void Log(string message)
         {
-            Logger.Log("----- Error ----- " + message);
+            Logger.InternalLog("----- Error ----- " + message);
         }
     }
 }

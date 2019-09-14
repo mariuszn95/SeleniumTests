@@ -4,7 +4,7 @@
     {
         public static void Log(string message)
         {
-            Logger.Log("----- Screenshot ----- " + message);
+            Logger.InternalLog("----- Screenshot ----- " + message);
         }
     }
 }
