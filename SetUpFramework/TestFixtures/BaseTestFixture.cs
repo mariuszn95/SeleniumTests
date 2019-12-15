@@ -28,8 +28,8 @@
             LoggerPage.LogStart(MethodBase.GetCurrentMethod().Name);
 
             Driver.Initialize();
-            Navigate.ToUrl(GetBaseAddress());
-            Wait.Until(d => d.Title.Contains(GetWebsiteName()));
+            Navigate.ToUrl(BaseAddress);
+            Wait.Until(d => d.Title.Contains(WebsiteName));
 
             LoggerPage.LogEnd(MethodBase.GetCurrentMethod().Name);
         }

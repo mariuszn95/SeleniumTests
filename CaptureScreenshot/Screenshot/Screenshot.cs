@@ -15,7 +15,7 @@
     {
         public static void Capture(string testName)
         {
-            if (Directory.Exists(TestContexts.GetArtifactsPath()))
+            if (Directory.Exists(TestContexts.ArtifactsPath))
             {
                 if (string.IsNullOrEmpty(testName))
                 {
@@ -25,7 +25,7 @@
 
                 var date = DateTime.Now;
                 var formattedDate = $"{date.Year}-{date.Month}-{date.Day}  {date.Hour}_{date.Minute} ";
-                var screenshotFileName = TestContexts.GetArtifactsPath() + "\\" + formattedDate + testName + ".jpg";
+                var screenshotFileName = TestContexts.ArtifactsPath + "\\" + formattedDate + testName + ".jpg";
                 LoggerScreenshot.Log("Attempting to take a screenshot.");
                 try
                 {
@@ -42,7 +42,7 @@
             }
             else
             {
-                LoggerScreenshot.Log($@"Missing Folder {TestContexts.GetArtifactsPath()}");
+                LoggerScreenshot.Log($@"Missing Folder {TestContexts.ArtifactsPath}");
             }
         }
     }

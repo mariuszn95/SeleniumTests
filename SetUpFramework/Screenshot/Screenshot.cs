@@ -17,7 +17,7 @@
 
             try
             {
-                if (TestContexts.GetArtifactsPath() != null)
+                if (TestContexts.ArtifactsPath != null)
                 {
                     global::CaptureScreenshot.Screenshot.Screenshot.Capture(testName);
                 }

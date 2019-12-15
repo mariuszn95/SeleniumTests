@@ -17,75 +17,84 @@
 
         public TestContexts()
         {
-            this.SetArtifactsPath();
-            this.SetBaseAddress();
-            this.SetWebsiteName();
+            ArtifactsPath = TestContext.Parameters.Get("ArtifactsPath");
+            BaseAddress = TestContext.Parameters.Get("BaseAddress");
+            WebsiteName = TestContext.Parameters.Get("WebsiteName");
         }
 
-        public static string GetArtifactsPath()
+        public static string ArtifactsPath
         {
-            LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {artifacts}");
-
-            return artifacts;
-        }
-
-        public static string GetBaseAddress()
-        {
-            LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {baseAddress}");
-
-            return baseAddress;
-        }
-
-        public static string GetWebsiteName()
-        {
-            LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {websiteName}");
-
-            return websiteName;
-        }
-
-        private void SetArtifactsPath()
-        {
-            LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
-
-            var param = TestContext.Parameters.Get("ArtifactsPath");
-            if (param != null)
+            get
             {
-                LoggerTestContexts.LogStart("ArtifactsPath from CI: " + param);
-                artifacts = param;
-                LoggerTestContexts.LogEnd("ArtifactsPath from CI: " + artifacts);
+                LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {artifacts}");
+
+                return artifacts;
             }
 
-            LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            private set
+            {
+                LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
+
+                var param = value;
+                if (param != null)
+                {
+                    LoggerTestContexts.LogStart("ArtifactsPath from CI: " + param);
+                    artifacts = param;
+                    LoggerTestContexts.LogEnd("ArtifactsPath from CI: " + artifacts);
+                }
+
+                LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            }
         }
 
-        private void SetBaseAddress()
+        public static string BaseAddress
         {
-            LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
-
-            var param = TestContext.Parameters.Get("BaseAddress");
-            if (param != null)
+            get
             {
-                LoggerTestContexts.LogStart("BaseAddress from CI: " + param);
-                baseAddress = param;
-                LoggerTestContexts.LogEnd("BaseAddress from CI: " + baseAddress);
+                LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {baseAddress}");
+
+                return baseAddress;
             }
 
-            LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            private set
+            {
+                LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
+
+                var param = value;
+                if (param != null)
+                {
+                    LoggerTestContexts.LogStart("BaseAddress from CI: " + param);
+                    baseAddress = param;
+                    LoggerTestContexts.LogEnd("BaseAddress from CI: " + baseAddress);
+                }
+
+                LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            }
         }
 
-        private void SetWebsiteName()
+        public static string WebsiteName
         {
-            LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
-
-            var param = TestContext.Parameters.Get("WebsiteName");
-            if (param != null)
+            get
             {
-                LoggerTestContexts.LogStart("WebsiteName from CI: " + param);
-                websiteName = param;
-                LoggerTestContexts.LogEnd("WebsiteName from CI: " + websiteName);
+                LoggerTestContexts.LogReturn($"{MethodBase.GetCurrentMethod().Name} ----- {websiteName}");
+
+                return websiteName;
             }
 
-            LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            private set
+            {
+                LoggerTestContexts.LogStart(MethodBase.GetCurrentMethod().Name);
+
+                var param = value;
+                if (param != null)
+                {
+                    LoggerTestContexts.LogStart("WebsiteName from CI: " + param);
+                    websiteName = param;
+                    LoggerTestContexts.LogEnd("WebsiteName from CI: " + websiteName);
+                }
+
+                LoggerTestContexts.LogEnd(MethodBase.GetCurrentMethod().Name);
+            }
         }
     }
 }

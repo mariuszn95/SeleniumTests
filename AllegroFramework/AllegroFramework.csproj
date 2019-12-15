@@ -58,10 +58,6 @@
       <Project>{2e32a63b-af4f-4f2e-8f8a-177e4d2a567f}</Project>
       <Name>Selenium</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestContexts\TestContexts.csproj">
-      <Project>{8dee175c-b023-4f10-8ab9-8e00e0cc9b8f}</Project>
-      <Name>TestContexts</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
