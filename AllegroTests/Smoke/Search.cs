@@ -1,18 +1,18 @@
-﻿using AllegroTests.Constants;
-
-namespace AllegroTests.Smoke
+﻿namespace AllegroTests.Smoke
 {
     using AllegroFramework.Helpers.Print;
     using AllegroFramework.Pages;
 
-    using Utilities;
-
     using NUnit.Framework;
 
+    using SetUpFramework.Constants;
+
+    using Utilities;
+
+    [Category(TestType.Smoke)]
     public class Search : AllegroSetUpTest
     {
         [Test]
-        [Category(TestType.Smoke)]
         public void UserCanSearchAMugAndWritePriceOfTheFirstFoundItemAndCheckIfThePriceIsGreaterThan20Zł()
         {
             HomePage.Search("Mug");

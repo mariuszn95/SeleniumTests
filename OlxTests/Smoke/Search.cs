@@ -7,6 +7,9 @@
 
     using OlxTests.Utilities;
 
+    using SetUpFramework.Constants;
+
+    [Category(TestType.Smoke)]
     public class Search : OlxSetUpTest
     {
         [Test]

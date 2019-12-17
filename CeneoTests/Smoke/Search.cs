@@ -7,6 +7,9 @@
 
     using NUnit.Framework;
 
+    using SetUpFramework.Constants;
+
+    [Category(TestType.Smoke)]
     public class Search : CeneoSetUpTest
     {
         [Test]

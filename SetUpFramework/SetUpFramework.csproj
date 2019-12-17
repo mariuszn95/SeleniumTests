@@ -38,6 +38,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\TestType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screenshot\Screenshot.cs" />
     <Compile Include="TestFixtures\BaseTestFixture.cs" />

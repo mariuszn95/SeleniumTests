@@ -1,4 +1,4 @@
-﻿namespace AllegroTests.Constants
+﻿namespace SetUpFramework.Constants
 {
     public static class TestType
     {
