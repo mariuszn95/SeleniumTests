@@ -46,6 +46,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\TestType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Smoke\Search.cs" />
     <Compile Include="Utilities\AllegroSetUpTest.cs" />
