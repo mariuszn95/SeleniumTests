@@ -59,5 +59,11 @@
   <ItemGroup>
     <Folder Include="Basic\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Selenium\Selenium.csproj">
+      <Project>{2E32A63B-AF4F-4F2E-8F8A-177E4D2A567F}</Project>
+      <Name>Selenium</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
