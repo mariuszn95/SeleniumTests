@@ -17,6 +17,15 @@
             LoggerSelenium.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
 
+        public static void Click(IWebElement element)
+        {
+            LoggerSelenium.LogStart(MethodBase.GetCurrentMethod().Name);
+
+            element.Click();
+
+            LoggerSelenium.LogEnd(MethodBase.GetCurrentMethod().Name);
+        }
+
         public static IWebElement FindElement(By locator)
         {
             LoggerSelenium.LogReturn(MethodBase.GetCurrentMethod().Name);

@@ -48,6 +48,10 @@
   <ItemGroup>
     <Compile Include="BasicElement.cs" />
     <Compile Include="Basic\Button.cs" />
+    <Compile Include="Basic\Checkbox.cs" />
+    <Compile Include="Basic\Dropdown.cs" />
+    <Compile Include="Basic\Input.cs" />
+    <Compile Include="Basic\Label.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
