@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="Logger\Logger.cs" />
     <Compile Include="Logger\LoggerActions.cs" />
+    <Compile Include="Logger\LoggerElements.cs" />
     <Compile Include="Logger\LoggerError.cs" />
     <Compile Include="Logger\LoggerPage.cs" />
     <Compile Include="Logger\LoggerScreenshot.cs" />

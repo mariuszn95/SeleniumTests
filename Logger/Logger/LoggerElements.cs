@@ -1,8 +1,8 @@
 ﻿namespace Logger.Logger
 {
-    public class LoggerSelenium
+    public class LoggerElements
     {
-        private static readonly string Dashes = "----- ----- ----- ----- ";
+        private static readonly string Dashes = "----- ----- ----- ";
 
         public static void LogStart(string message)
         {
