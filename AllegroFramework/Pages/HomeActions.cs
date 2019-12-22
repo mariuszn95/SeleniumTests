@@ -21,7 +21,7 @@
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            Driver.Click(CloseRodoButton);
+            ElementHelpers.Click(CloseRodoButton);
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
@@ -30,7 +30,7 @@
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            Driver.Click(SearchButton);
+            ElementHelpers.Click(SearchButton);
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
@@ -39,7 +39,7 @@
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            Driver.SendKeys(SearchInput, searchValue);
+            ElementHelpers.SendKeys(SearchInput, searchValue);
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }

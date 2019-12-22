@@ -19,14 +19,14 @@
         {
             LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
 
-            return Driver.GetText(Name);
+            return ElementHelpers.GetText(Name);
         }
 
         internal static string GetFirstProductPrice()
         {
             LoggerActions.LogReturn(MethodBase.GetCurrentMethod().Name);
 
-            var priceValue = Driver.GetText(PriceValue);
+            var priceValue = ElementHelpers.GetText(PriceValue);
 
             return priceValue;
         }
