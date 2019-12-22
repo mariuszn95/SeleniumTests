@@ -2,21 +2,21 @@
 {
     public class LoggerPage
     {
-        private static string dashes = "----- ";
+        private static readonly string Dashes = "----- ";
 
         public static void LogStart(string message)
         {
-            Logger.InternalLog($"{dashes}Start - {message}");
+            Logger.InternalLog($"{Dashes}Start - {message}");
         }
 
         public static void LogEnd(string message)
         {
-            Logger.InternalLog($"{dashes}End - {message}");
+            Logger.InternalLog($"{Dashes}End - {message}");
         }
 
         public static void LogReturn(string message)
         {
-            Logger.InternalLog($"{dashes}Return - {message}");
+            Logger.InternalLog($"{Dashes}Return - {message}");
         }
     }
 }

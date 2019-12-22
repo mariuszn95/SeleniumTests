@@ -13,7 +13,7 @@
         {
             BaseTestFixture.OpenService();
         }
-        
+
         [TearDown]
         public void TearDown()
         {

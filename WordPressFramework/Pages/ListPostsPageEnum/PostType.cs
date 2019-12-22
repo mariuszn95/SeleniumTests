@@ -4,6 +4,6 @@
     {
         Page,
 
-        Posts
+        Posts,
     }
 }

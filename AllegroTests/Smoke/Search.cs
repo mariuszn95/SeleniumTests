@@ -3,11 +3,10 @@
     using AllegroFramework.Helpers.Print;
     using AllegroFramework.Pages;
 
+    using AllegroTests.Utilities;
+
     using NUnit.Framework;
-
     using SetUpFramework.Constants;
-
-    using Utilities;
 
     [Category(TestType.Smoke)]
     public class Search : AllegroSetUpTest
