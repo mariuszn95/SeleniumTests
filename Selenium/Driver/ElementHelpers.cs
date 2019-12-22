@@ -17,6 +17,13 @@
             LoggerSelenium.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
 
+        public static IWebElement FindElement(By locator)
+        {
+            LoggerSelenium.LogReturn(MethodBase.GetCurrentMethod().Name);
+
+            return Driver.Instance.FindElement(locator);
+        }
+
         public static string GetText(By locator)
         {
             LoggerSelenium.LogReturn(MethodBase.GetCurrentMethod().Name);
@@ -31,13 +38,6 @@
             FindElement(locator).SendKeys(enterValue);
 
             LoggerSelenium.LogEnd(MethodBase.GetCurrentMethod().Name);
-        }
-
-        private static IWebElement FindElement(By locator)
-        {
-            LoggerSelenium.LogReturn(MethodBase.GetCurrentMethod().Name);
-
-            return Driver.Instance.FindElement(locator);
         }
     }
 }
