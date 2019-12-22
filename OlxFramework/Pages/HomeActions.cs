@@ -2,6 +2,8 @@
 {
     using System.Reflection;
 
+    using Elements.Basic;
+
     using Logger.Logger;
 
     using OpenQA.Selenium;
@@ -10,15 +12,15 @@
 
     internal static class HomeActions
     {
-        private static readonly By SearchButton = By.CssSelector("#submit-searchmain");
-
         private static readonly By SearchInput = By.CssSelector("#headerSearch");
+
+        private static Button SearchButton => new Button(By.CssSelector("#submit-searchmain"));
 
         internal static void ClickSearchButton()
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            ElementHelpers.Click(SearchButton);
+            SearchButton.Click();
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }

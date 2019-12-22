@@ -2,6 +2,8 @@
 {
     using System.Reflection;
 
+    using Elements.Basic;
+
     using Logger.Logger;
 
     using OpenQA.Selenium;
@@ -10,18 +12,17 @@
 
     internal static class HomeActions
     {
-        private static readonly By CloseRodoButton =
-            By.XPath("//button[@data-analytics-interaction-value='closeIcon']");
-
-        private static readonly By SearchButton = By.XPath("//button[@data-role='search-button']");
-
         private static readonly By SearchInput = By.XPath("//input[@data-role='search-input']");
+
+        private static Button CloseRodoButton => new Button(By.XPath("//button[@data-analytics-interaction-value='closeIcon']"));
+
+        private static Button SearchButton => new Button(By.XPath("//button[@data-role='search-button']"));
 
         internal static void CloseRodo()
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            ElementHelpers.Click(CloseRodoButton);
+            CloseRodoButton.Click();
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }
@@ -30,7 +31,7 @@
         {
             LoggerActions.LogStart(MethodBase.GetCurrentMethod().Name);
 
-            ElementHelpers.Click(SearchButton);
+            SearchButton.Click();
 
             LoggerActions.LogEnd(MethodBase.GetCurrentMethod().Name);
         }

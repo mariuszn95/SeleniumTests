@@ -4,7 +4,7 @@
 
     using Selenium.Driver;
 
-    internal class BasicElement
+    public class BasicElement
     {
         public BasicElement(By locator)
         {
