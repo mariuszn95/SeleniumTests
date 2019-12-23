@@ -15,7 +15,17 @@
 
         public bool IsVisible()
         {
+            return ElementHelpers.FindElement(this.MainLocator).Displayed;
+        }
+
+        public bool IsActive()
+        {
             return ElementHelpers.FindElement(this.MainLocator).Enabled;
+        }
+
+        public bool IsReadOnly()
+        {
+            return this.IsVisible() && !this.IsActive();
         }
     }
 }
