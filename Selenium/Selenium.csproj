@@ -56,6 +56,10 @@
       <Project>{cbe1712e-1bc2-4044-9600-c15f59987a42}</Project>
       <Name>Logger</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestContexts\TestContexts.csproj">
+      <Project>{8dee175c-b023-4f10-8ab9-8e00e0cc9b8f}</Project>
+      <Name>TestContexts</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
