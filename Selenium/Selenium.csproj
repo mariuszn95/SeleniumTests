@@ -42,6 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriverHelpers\Manage.cs" />
     <Compile Include="Driver\Driver.cs" />
     <Compile Include="DriverHelpers\Navigate.cs" />
     <Compile Include="DriverHelpers\Wait.cs" />

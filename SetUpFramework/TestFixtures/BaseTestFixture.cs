@@ -18,6 +18,7 @@
             LoggerPage.LogStart(MethodBase.GetCurrentMethod().Name);
 
             ErrorMessages.VerifyAndClearMessages();
+            Manage.ClearCookies();
             Driver.Close();
 
             LoggerPage.LogEnd(MethodBase.GetCurrentMethod().Name);
