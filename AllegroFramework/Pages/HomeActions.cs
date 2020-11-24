@@ -14,7 +14,7 @@
     {
         private static readonly By SearchInput = By.XPath("//input[@data-role='search-input']");
 
-        private static Button CloseRodoButton => new Button(By.XPath("//button[@data-analytics-interaction-value='closeIcon']"));
+        private static Button CloseRodoButton => new Button(By.XPath("//button[@data-role='accept-consent']"));
 
         private static Button SearchButton => new Button(By.XPath("//button[@data-role='search-button']"));
 

@@ -11,9 +11,9 @@
 
     internal static class SearchResultsActions
     {
-        private static readonly By Name = By.CssSelector(".opbox-listing--base article h2 > a");
+        private static readonly By Name = By.CssSelector(".opbox-listing h2 > a");
 
-        private static readonly By PriceValue = By.CssSelector(".opbox-listing--base article div > span > span");
+        private static readonly By PriceValue = By.CssSelector(".opbox-listing article div:first-child > span");
 
         internal static string GetFirstProductName()
         {
