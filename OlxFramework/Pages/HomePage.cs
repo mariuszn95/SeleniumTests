@@ -11,6 +11,7 @@
             LoggerPage.LogStart(MethodBase.GetCurrentMethod().Name);
 
             HomeActions.EnterSearchValue(searchValue);
+            HomeActions.ClickAcceptTrustPolicy();
             HomeActions.ClickSearchButton();
 
             LoggerPage.LogEnd(MethodBase.GetCurrentMethod().Name);
