@@ -10,7 +10,7 @@
 
     internal static class SearchResultsActions
     {
-        private static readonly By Name = By.CssSelector(".cat-prod-row-name a");
+        private static readonly By Name = By.CssSelector(".cat-prod-row__name a");
 
         private static readonly By PricePenny = By.CssSelector(".price .penny");
 

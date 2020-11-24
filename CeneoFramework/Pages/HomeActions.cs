@@ -14,7 +14,7 @@
     {
         private static readonly By SearchInput = By.CssSelector("#form-head-search-q");
 
-        private static Button SearchButton => new Button(By.CssSelector(".search-icon"));
+        private static Button SearchButton => new Button(By.CssSelector(".header-search-2020__button"));
 
         internal static void ClickSearchButton()
         {
